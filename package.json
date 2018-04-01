@@ -1,6 +1,6 @@
 {
   "name": "spike-frank",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Custom, shared configuration base for Spike SSG",
   "main": "index.js",
   "scripts": {
@@ -14,5 +14,11 @@
   "license": "ISC",
   "peerDependencies": {
     "spike": "github:adamkiss/spike"
+  },
+  "dependencies": {
+    "autoprefixer": "~8.2.0",
+    "cssnano": "~3.10.0",
+    "lodash.mergewith": "~4.6.1",
+    "spike-js-standards": "~2.0.2"
   }
 }
