@@ -20,10 +20,10 @@ const frank = {
 	vendor: 'assets/vendor/**/*',
 
 	// Matchers: Add SugarML, Sass
-	matchers: { html: '*(**/)*.sgr', css: '*(**/)*.s(a|c)ss' },
+	matchers: { html: '*(**/)*.sgr', css: '*(**/)*.@(c|sa|sc)ss' },
 
 	// Ignore magic
-	ignore: ['*', '**/_*', '**/.*', 'partials/**'],
+	ignore: [ '*', '**/_*', '**/.*', 'partials/**', 'assets/@(css|js)/**' ],
 
 	// Webpack rules
 	module: {
@@ -35,6 +35,9 @@ const frank = {
 
 	postcss: postcss(),
 	babel: jsStandards(),
+	entry: {
+		'assets/main': './assets/main.js'
+	},
 
 	// plugins after spike
 	afterSpikePlugins: [new Transform([
