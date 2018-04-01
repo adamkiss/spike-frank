@@ -21,6 +21,17 @@
     "autoprefixer": "^8.2.0",
     "cssnano": "^3.10.0",
     "lodash.mergewith": "^4.6.1",
-    "spike-js-standards": "^2.0.2"
+    "markdown-it": "~8.4.1",
+    "reshape-beautify": "~0.1.2",
+    "reshape-content": "~0.3.0",
+    "reshape-eval-code": "~0.3.4",
+    "reshape-expressions": "~0.1.5",
+    "reshape-include": "~1.0.0",
+    "reshape-layouts": "~1.0.0",
+    "reshape-minify": "~1.1.0",
+    "reshape-retext": "~1.0.1",
+    "retext-smartypants": "~3.0.1",
+    "spike-js-standards": "^2.0.2",
+    "sugarml": "~0.6.0"
   }
 }

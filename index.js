@@ -1,10 +1,11 @@
 const merge = require('lodash.mergewith')
-const customizer = require('./src/customizer')
+const customizer = require('./src/utils/customizer-frank')
 
 const isProduction = require('./src/utils/is-production')
 
 const postcss = require('./src/postcss')
 const jsStandards = require('spike-js-standards')
+const reshape = require('./src/reshape')
 
 const Transform = require('./src/spike/transform')
 const transformPhp = require('./src/spike/transform-php')
@@ -48,3 +49,5 @@ module.exports = opts => {
 }
 
 module.exports.isProduction = isProduction
+
+module.exports.reshape = reshape
