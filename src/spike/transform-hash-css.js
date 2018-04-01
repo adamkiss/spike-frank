@@ -21,7 +21,6 @@ module.exports = {
 			return names[name]
 		}
 	},
-	// TODO: This is wrong.
 	replaceCssHref: {
 		match: name => name.endsWith('.html') || name.endsWith('.php'),
 		replace: src => src
