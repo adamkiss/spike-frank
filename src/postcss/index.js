@@ -1,9 +1,11 @@
 const autoprefixer = require('autoprefixer')
 const cssnano = require('cssnano')
 
+const isProduction = require('../utils/is-production')
+
 module.exports = () => {
 	return {
-		plugins: process.env.SPIKE_ENV === 'production' ?
+		plugins: isProduction() ?
 			[autoprefixer(), cssnano()] :
 			[autoprefixer()]
 	}

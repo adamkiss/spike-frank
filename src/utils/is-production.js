@@ -1,0 +1,1 @@
+module.exports = () => process.env.SPIKE_ENV === 'production'
