@@ -1,6 +1,6 @@
 {
   "name": "spike-frank",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Custom, shared configuration base for Spike SSG",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,7 @@
   "dependencies": {
     "autoprefixer": "^8.2.0",
     "cssnano": "^3.10.0",
+    "lodash.merge": "~4.6.1",
     "lodash.mergewith": "^4.6.1",
     "markdown-it": "~8.4.1",
     "reshape-beautify": "~0.1.2",
@@ -29,6 +30,7 @@
     "reshape-include": "~1.0.0",
     "reshape-layouts": "~1.0.0",
     "reshape-minify": "~1.1.0",
+    "reshape-plugin-util": "~0.2.1",
     "reshape-retext": "~1.0.1",
     "retext-smartypants": "~3.0.1",
     "spike-js-standards": "^2.0.2",

@@ -1,4 +1,6 @@
 const sugarml = require('sugarml')
+const htmlParser = require('reshape-parser')
+
 const smartypants = require('retext-smartypants')
 let MarkdownIt = require('markdown-it')
 let expressions = require('reshape-expressions')
@@ -11,6 +13,7 @@ let minify = require('reshape-minify')
 let evalCode = require('reshape-eval-code')
 
 const isProduction = require('../utils/is-production')
+const merge = require('lodash.merge')
 /**
  * Primary export. For all options see: https://github.com/reshape/standard
  */
@@ -22,6 +25,13 @@ module.exports = function reshapeStandard (options = {}) {
   const expressionsOpt = selectKeys(options, ['delimiters', 'unescapeDelimiters'])
   const layoutsOpt = selectKeys(options, ['root'])
   const includeOpt = selectKeys(options, ['root', 'alias', 'parserRules'])
+
+  merge(includeOpt, {
+    parserRules: [
+      { test: /\.sgr$/, parser: sugarml },
+      { test: /\.html?$/, parser: htmlParser }
+    ]
+  })
 
   // Always return an object for locals
   if (typeof options.locals === 'undefined') options.locals = {}
