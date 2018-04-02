@@ -17,7 +17,6 @@ module.exports = {
 		match: name => name.endsWith('.css'),
 		rename: (name, src) => {
 			names[name] = name.replace('.css', `.${hash(src)}.css`)
-			console.log(names[name])
 			return names[name]
 		}
 	},
