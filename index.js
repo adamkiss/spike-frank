@@ -25,7 +25,10 @@ const frank = {
 	matchers: { html: '*(**/)*.sgr', css: '*(**/)*.@(c|sa|sc)ss' },
 
 	// Ignore magic
-	ignore: [ '*', '**/_*', '**/.*', 'partials/**', 'assets/@(css|js)/**' ],
+	ignore: [
+		'*', '**/_*', '**/.*',
+		'partials/**', 'assets/@(css|js)/**', 'data/**'
+	],
 
 	// Webpack rules
 	module: {
