@@ -2,7 +2,7 @@ const createHash = require('crypto').createHash
 const hash = str => {
 	const hash = createHash('RSA-MD5')
 	hash.update(str, 'utf-8')
-	return hash.digest('hex').substr(0,6)
+	return hash.digest('hex').substr(0,20)
 }
 
 const names = {}
