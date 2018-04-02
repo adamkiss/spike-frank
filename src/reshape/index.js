@@ -21,8 +21,7 @@ const merge = require('lodash.merge')
  * Primary export. For all options see: https://github.com/reshape/standard
  */
 module.exports = function reshapeStandard (options = {}) {
-  // v0.2: Hardcode path (clean up later @todo)
-  options.root = '.'
+  if (!options.root) { options.root = '.' }
 
   // add options for expressions, layouts, and includes if present
   const expressionsOpt = selectKeys(options, ['delimiters', 'unescapeDelimiters'])
