@@ -12,6 +12,9 @@ let beautify = require('reshape-beautify')
 let minify = require('reshape-minify')
 let evalCode = require('reshape-eval-code')
 
+const php = require('./plugin-php.js')
+const activeLinks = require('./plugin-active-links.js')
+
 const isProduction = require('../utils/is-production')
 const merge = require('lodash.merge')
 /**
@@ -58,7 +61,8 @@ module.exports = function reshapeStandard (options = {}) {
     // eval code here if it's a static view so that locals can be
     // processed by content, retext, minifier, etc
     ...Array.prototype.concat(options.pluginsPreEval || []),
-    (options.template ? x => x : evalCode(options.locals)),
+    evalCode(options.locals),
+    activeLinks(), php(), 
     ...Array.prototype.concat(options.pluginsPostEval || []),
     content(contentOpt),
     retext(options.retext || smartypants)
