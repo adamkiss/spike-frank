@@ -2,6 +2,7 @@
 
 const tag = /<php>([\S\s]*?)<\/php>/g
 const echo = /<php echo>([\S\s]*?)<\/php>/g
+const only = /<php only>([\S\s]*?)<\/php>/g
 
 module.exports = {
 	match: name => name.endsWith('.php.html'),
@@ -9,4 +10,5 @@ module.exports = {
 	replace: f => f
 		.replace(tag, (all, content) => `<?php ${content} ?>`)
 		.replace(echo, (all, content) => `<?= ${content} ?>`)
+		.replace(only, (all, content) => `<?php ${content}`)
 }
