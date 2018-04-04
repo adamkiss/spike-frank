@@ -1,6 +1,6 @@
 // Transform generated <php> tags to real PHP tags and rename files
 
-const tag = /<php>([\S\s]*?)<\/php>/g
+const tag = /<php>([\S\s]*?)<\/php>\n/g
 const echo = /<php echo>([\S\s]*?)<\/php>/g
 const only = /<php only>([\S\s]*?)<\/php>/g
 
