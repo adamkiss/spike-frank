@@ -26,7 +26,7 @@ const frank = {
 
 	// Ignore magic
 	ignore: [
-		'*', '**/_*', '**/.*',
+		'*', '**/_*', '**/.DS_Store',
 		'partials/**', 'assets/@(css|js)/**', 'data/**'
 	],
 
