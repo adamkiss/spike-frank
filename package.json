@@ -1,6 +1,6 @@
 {
   "name": "@adamkiss/spike-frank",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "description": "Custom, shared configuration base for Spike SSG",
   "main": "index.js",
   "scripts": {
