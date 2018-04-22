@@ -31,6 +31,7 @@
     "reshape-include": "~1.0.0",
     "reshape-layouts": "~1.0.0",
     "reshape-minify": "~1.1.0",
+    "reshape-parser": "~0.2.1",
     "reshape-plugin-util": "~0.2.1",
     "reshape-retext": "~1.0.1",
     "retext-smartypants": "~3.0.1",
@@ -45,7 +46,9 @@
     "rules": {
       "generator-star-spacing": 0,
       "capitalized-comments": 0,
-      "require-yield": 0
+      "require-yield": 0,
+      "func-names": 0,
+      "curly": ["error", "multi", "consistent"]
     }
   }
 }

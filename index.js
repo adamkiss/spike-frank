@@ -1,16 +1,17 @@
 const merge = require('lodash.mergewith')
-const customizer = require('./src/utils/customizer-frank')
-
-const isProduction = require('./src/utils/is-production')
-
-const postcss = require('./src/postcss')
 const jsStandards = require('spike-js-standards')
+const postcss = require('./src/postcss')
 const reshape = require('./src/reshape')
+
+const customizer = require('./src/utils/customizer-frank')
+const isProduction = require('./src/utils/is-production')
 
 const Transform = require('./src/spike/transform')
 const transformPhp = require('./src/spike/transform-php')
 const transformIndex = require('./src/spike/transform-indexify')
 const transformFixDoctype = require('./src/spike/transform-fix-doctype')
+
+const markdown = require('./src/reshape/markdown')
 
 const spikePage = require('./src/spike/page')
 
@@ -22,7 +23,7 @@ const frank = {
 	vendor: 'assets/vendor/**/*',
 
 	// Matchers: Add SugarML, Sass
-	matchers: { html: '*(**/)*.sgr', css: '*(**/)*.@(c|sa|sc)ss' },
+	matchers: {html: '*(**/)*.sgr', css: '*(**/)*.@(c|sa|sc)ss'},
 
 	// Ignore magic
 	ignore: [
@@ -58,6 +59,7 @@ module.exports = opts => {
 
 Object.assign(module.exports, {
 	isProduction,
-	reshape, jsStandards, postcss
+	reshape, jsStandards, postcss,
+	markdown,
 	page: spikePage
 })
