@@ -1,6 +1,6 @@
 {
   "name": "@adamkiss/spike-frank",
-  "version": "0.4.10",
+  "version": "0.5.0",
   "description": "Custom, shared configuration base for Spike SSG",
   "main": "index.js",
   "scripts": {
@@ -48,7 +48,11 @@
       "capitalized-comments": 0,
       "require-yield": 0,
       "func-names": 0,
-      "curly": ["error", "multi", "consistent"]
+      "curly": [
+        "error",
+        "multi",
+        "consistent"
+      ]
     }
   }
 }
