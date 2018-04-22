@@ -56,7 +56,8 @@ module.exports = opts => {
 	return frank
 }
 
-module.exports.isProduction = isProduction
-
-module.exports.reshape = reshape
-module.exports.page = spikePage
+Object.assign(module.exports, {
+	isProduction,
+	reshape, jsStandards, postcss
+	page: spikePage
+})
