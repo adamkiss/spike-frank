@@ -39,5 +39,13 @@
   },
   "devDependencies": {
     "xo": "~0.20.3"
+  },
+  "xo": {
+    "semicolon": false,
+    "rules": {
+      "generator-star-spacing": 0,
+      "capitalized-comments": 0,
+      "require-yield": 0
+    }
   }
 }
