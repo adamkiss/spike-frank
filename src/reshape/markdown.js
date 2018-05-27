@@ -1,6 +1,6 @@
 const MarkdownIt = require('markdown-it')
 
-const markdownOpt = {typographer: true, linkify: true}
+const markdownOpt = {typographer: true, linkify: true, html: true}
 
 module.exports = (opts = {}) => {
 	const md = new MarkdownIt(Object.assign({}, markdownOpt, opts))
