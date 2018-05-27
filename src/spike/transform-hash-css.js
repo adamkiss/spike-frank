@@ -7,10 +7,8 @@ const hash = str => {
 
 const names = {}
 
-const cssLink = /href=["']\/(.*?)([^\/]*?.css)["']/
-const cssLinkReplace = (match, path, name) => {
-	return `href="/${names[path+name] || path+name}"`
-}
+const cssLink = /href=["']\/([0-9a-zA-Z\-\_\/]*?)([^\/]*?.css)["']/g
+const cssLinkReplace = (match, path, name) => `href="/${names[path+name] || path+name}"`
 
 module.exports = {
 	hashCss: {
