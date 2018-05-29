@@ -16,7 +16,8 @@ const isProduction = require('../utils/is-production')
 
 const markdown = require('./markdown')
 const php = require('./plugin-php.js')
-const activeLinks = require('./plugin-active-links.js')
+const linksActiveIf = require('./plugin-links-active-if.js')
+const linksExternal = require('./plugin-links-external.js')
 
 /**
  * Primary export. For all options see: https://github.com/reshape/standard
@@ -53,7 +54,7 @@ module.exports = function reshapeStandard(options = {}) {
 		// processed by content, retext, minifier, etc
 		...Array.prototype.concat(options.pluginsPreEval || []),
 		evalCode(options.locals),
-		activeLinks(), php(),
+		linksActiveIf(), linksExternal(), php(),
 		...Array.prototype.concat(options.pluginsPostEval || []),
 		content(contentOpt),
 		retext(options.retext || smartypants)
