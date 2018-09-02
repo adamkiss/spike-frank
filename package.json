@@ -36,7 +36,7 @@
     "reshape-retext": "~1.0.1",
     "retext-smartypants": "~3.0.1",
     "spike-js-standards": "^2.0.2",
-    "sugarml": "~0.6.0"
+    "sugarml": "~0.7.0"
   },
   "devDependencies": {
     "xo": "~0.20.3"
