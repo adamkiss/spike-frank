@@ -6,9 +6,9 @@ const only = /<php only>([\S\s]*?)<\/php>/g
 
 function recodeEntities(content) {
 	return content
-		.replace('&amp;', '&')
-		.replace('&gt;', '>')
-		.replace('&lt;', '<')
+		.replace(/&amp;/gi, '&')
+		.replace(/&gt;/gi, '>')
+		.replace(/&lt;/gi, '<')
 }
 
 module.exports = {
