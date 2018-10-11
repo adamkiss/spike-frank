@@ -7,7 +7,7 @@ const customizer = require('./src/utils/customizer-frank')
 const isProduction = require('./src/utils/is-production')
 
 const Transform = require('./src/spike/transform')
-const transformPhp = require('./src/spike/transform-php')
+const transformPhp = require('./src/spike/transform-php-with-entities')
 const transformIndex = require('./src/spike/transform-indexify')
 const transformFixDoctype = require('./src/spike/transform-fix-doctype')
 
