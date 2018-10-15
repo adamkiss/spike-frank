@@ -19,7 +19,7 @@ const frank = {
 	// Directory settings
 	root: `${__dirname}/site/`,
 	dumpDirs: ['site'],
-	outputDir: 'public',
+	outputDir: '_dist/public',
 	vendor: 'assets/vendor/**/*',
 
 	// Matchers: Add SugarML, Sass
