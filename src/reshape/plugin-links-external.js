@@ -15,13 +15,18 @@ module.exports = function reshapeActiveLinks(locals) {
 	return function activeLinksPlugin(tree, opts) {
 		return modifyNodes(tree, node => isExternal(node), node => {
 			Object.assign(node.attrs, {
-				target: reshapeAttributeObject(
-					node.location,
-					'_blank'
-				), rel: reshapeAttributeObject(
-					node.location,
-					node.attrs.external ? 'noopener' : 'noreferrer'
-				)
+				target: [
+					reshapeAttributeObject(
+						node.location,
+						'_blank'
+					)
+				],
+				rel: [
+					reshapeAttributeObject(
+						node.location,
+						node.attrs.external ? 'noopener' : 'noreferrer'
+					)
+				]
 			})
 
 			if (node.attrs.external)
