@@ -9,7 +9,7 @@
   "public": true,
   "repository": {
     "type": "git",
-    "url": "github.com/adamkiss/spike-frank"
+    "url": "https://github.com/adamkiss/spike-frank"
   },
   "author": "Adam Kiss <iamadamkiss+npm@gmail.com>",
   "license": "ISC",
